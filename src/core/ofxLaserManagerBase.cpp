@@ -343,9 +343,8 @@ void ManagerBase::drawLaserGraphic(Graphic& graphic, float brightness, string re
     
     auto & polylines = graphic.polylines;
     auto & colours = graphic.colours;
-    
     for(size_t i= 0; i<polylines.size(); i++) {
-        ofColor col = colours[i];
+        ofColor col = ofColor(255, 255, 255);
         col*=brightness;
         drawPoly(*polylines[i],col, renderProfile);
         
